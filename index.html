@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Expense Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&family=Noto+Sans&family=Nunito+Sans&family=Poppins:wght@500&family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <h1>Income Expense Calculator</h1>
+            <div class="row">
+                <div class="col">
+                    <h3>Income</h3>
+                    <br>
+                    <form action="" id="formIncome">
+
+                        <select name="incomeSrc" id="incomeSrc">
+                            <option value="Salary">Salary</option>
+                            <option value="Investment">Investment</option>
+                            <option value="other">Other</option>
+                        </select>
+
+                        <input type="number" id="incomeAmt" placeholder="amount (in Rupees)">
+                        <br><br>
+                        
+                        <input type="button" id="submitIncome" value="Calculate">
+                    </form>
+                </div>
+                <div class="col">
+                    <h3>Expense</h3>
+                    <br>
+                    <form action="" id="formExpense" method="get">
+                        <select name="expenseSrc" id="expenseSrc">
+                            <option value="Rent">Rent</option>
+                            <option value="food">Food</option>
+                            <option value="other">Other</option>
+                        </select>                            
+                        <input type="number" id="expenseAmt" placeholder="amount (in Rupees)">
+                        <br><br>
+                        <input type="button" id="submitExpense" value="Calculate">
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <table id="tableIncome">
+                        <tbody>
+                            <tr>
+                                <th>Income</th>
+                                <th>Amount</th>
+                            </tr>
+                           </tbody>
+                           
+                    </table>
+                    <h3 id="totalIncome"></h3>
+                    
+                </div>
+                <div class="col">
+                    <table id="tableExpense">
+                        <tbody>
+                            <tr>
+                                <th>Expense</th>
+                                <th>Amount</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h3 id="totalExpense"> </h3>
+                </div>
+            </div>
+            <div class="row">
+                <canvas id="myChart" style="width:100%;"></canvas>
+            </div>
+                   
+            
+        </div>
+
+    </main>
+    <script src="incomeCal.js"></script>
+</body>
+
+</html>
